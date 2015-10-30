@@ -19,8 +19,10 @@ $config = new \My\Config(ROOT_PATH . '/application/Configs/application.ini', $en
 $res = $config->toArray('webmaster_email');
 if(!empty($res)){
 	define("WEBMASTER_EMAIL", $config->toArray('webmaster_email'));
+	define("PUBLIC_FOLDER", $config->toArray('public_folder'));
 } else {
-	define("WEBMASTER_EMAIL", "jurin.axelle@gmail.com");
+	define("WEBMASTER_EMAIL", "contact@axelle-jurin.xyz");
+	define("PUBLIC_FOLDER", "public_html");
 }
 
 // Code de l'application

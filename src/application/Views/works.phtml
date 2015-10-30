@@ -1,6 +1,6 @@
 <section id="works">
 	<div>
-		<h3>Réalisations</h3>
+		<h2>Réalisations</h2>
 		<div class="row row-centered">
 			<?php if ( isset($this->listWorks) && !empty($list->listWork) ) {?>
 				<?php foreach ($this->listWorks as $key => $work) {?>
@@ -21,7 +21,7 @@
 										<img class="img-responsive" src="<?= $work->getUrlImg()?>" alt="project<?= $key ?>" />
 									</div>
 									<div class="col-xs-12 col-sm-6 description">
-										<h3>Description</h3>
+										<h4>Description</h4>
 										<ul>
 										<?php foreach ($work->getDescription() as $description) {?>
 											<li>$description</li>

@@ -1,11 +1,15 @@
-<?php require_once './php/send.php'; ?>
+<?php
+require_once ROOT_PATH."/".PUBLIC_FOLDER."/php/send.php"; 
+
+
+?>
 
 <section id="contact">
 	<div class="row">
 		
 		<div id="formContact" class="col-xs-12 col-sm-7">
 			<div>
-				<h3>Contact</h3>
+				<h2>Contact</h2>
 				<div>
 					<?php 
 						if(isset($errors) && !empty($errors))
@@ -55,13 +59,13 @@
 					<li><i class="fa fa-female fa-x3"></i>26 ans</li>
 					<li><i class="fa fa-map-marker fa-x3"></i>BRON</li>
 					<li><i class="fa fa-car fa-x3"></i>Permis B</li>
-					<li><a href="callto:+33604515167"><i class="fa fa-envelope fa-x3"></i><img alt="" src="/images/email.png"></a></li>
+					<li><a href=""><i class="fa fa-envelope fa-x3"></i><img alt="" src="/images/email.png"></a></li>
 					<li>
 						<script type="text/javascript">
 							mailto('mailto','jurin','axelle','gmail','com');
 						</script>
 					</li>
-					<li><a href=""><i class="fa fa-mobile fa-x3"></i><img alt="" src="/images/tel.png"></a></li>
+					<li><i class="fa fa-mobile fa-x3"></i><img alt="" src="/images/tel.png"></li>
 				</ul>
 			</div>
 		</div>

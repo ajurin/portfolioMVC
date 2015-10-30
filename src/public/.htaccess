@@ -2,6 +2,17 @@ SetEnv ENV production
 
 Options -Indexes -MultiViews
 
+<IfModule mod_headers.c>
+	Header always set X-XSS-Protection "1; mode=block"
+	Header always set X-FRAME-OPTIONS "DENY"
+	Header always set X-Content-Type-Options "nosniff"
+	Header set Content-Security-Policy "script-src 'self' https://www.google.com"
+
+	<FilesMatch ".(js|css|xml|gz|html)$">
+		Header append Vary: Accept-Encoding
+	</FilesMatch>
+</IfModule>
+
 <IfModule mod_rewrite.c>
 
 	Options +FollowSymlinks
