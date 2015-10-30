@@ -21,11 +21,7 @@ class PDO extends \My\Database {
 	protected $link;
 
 	protected function __construct() {
-		try {
-			$this->link = new \PDO(self::$dsn, self::$username, self::$password);
-		}catch (\PDOException $e){
-		
-		}
+		$this->link = new \PDO(self::$dsn, self::$username, self::$password);
 	}
 	
 	public function select($why = '*'){

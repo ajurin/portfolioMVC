@@ -16,7 +16,12 @@ spl_autoload_register(array('My\Autoloader', 'autoload'));
 
 $config = new \My\Config(ROOT_PATH . '/application/Configs/application.ini', $env);
 //\My\Database\PDO::setOptions($config->toArray('pdo'));
-define("WEBMASTER_EMAIL", $config->toArray('webmaster_email'));
+$res = $config->toArray('webmaster_email');
+if(!empty($res)){
+	define("WEBMASTER_EMAIL", $config->toArray('webmaster_email'));
+} else {
+	define("WEBMASTER_EMAIL", "jurin.axelle@gmail.com");
+}
 
 // Code de l'application
 $request = new \My\Request();
@@ -28,7 +33,6 @@ $router->route();
 
 // Dispatching
 $dispatcher = new \My\Dispatcher($request, $response);
-
 $dispatcher->dispatch();
 
 //Envoi de la réponse

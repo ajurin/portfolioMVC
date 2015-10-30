@@ -19,7 +19,7 @@ class Skill {
 	 * TODO
 	 * @param \App\Models $skill
 	 */
-	public function save(\App\Models $skill){
+	public function save(\App\Models\Skill $skill){
 			
 	}
 	
@@ -27,7 +27,7 @@ class Skill {
 	 * TODO
 	 * @param \App\Models $skill
 	 */
-	public function delete(\App\Models $skill){
+	public function delete(\App\Models\Skill $skill){
 		
 	}
 	
@@ -44,7 +44,7 @@ class Skill {
 		
 		foreach ($res as $data)
 		{
-			$list[] = new \App\Models\Skill($data['title'], $data['url_img']);
+			$list[] = new \App\Models\Skill($data['title'], $data['urlImg']);
 		}
 		return $list;
 	}

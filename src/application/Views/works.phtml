@@ -2,6 +2,43 @@
 	<div>
 		<h3>Réalisations</h3>
 		<div class="row row-centered">
+			<?php if ( isset($this->listWorks) && !empty($list->listWork) ) {?>
+				<?php foreach ($this->listWorks as $key => $work) {?>
+					<!-- PROJECT <?= $key ?> -->
+					<img class="col-xs-12 col-sm-6 col-centered" src="<?= $work->getUrlImg()?>" alt="project<?= $key ?>" data-toggle="modal" data-target="#project<?= $key ?>">
+					<!-- Modal project1 -->
+					<div class="modal fade" id="project<?= $key ?>" tabindex="-1" role="dialog" aria-labelledby="modalProject<?= $key ?>">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h3 id="modalProject<?= $key ?>" class="text-center"><?= $work->getTitle() ?></h3>
+								</div>
+								<div class="modal-body row">
+									<div class="col-xs-12 col-sm-6">
+										<img class="img-responsive" src="<?= $work->getUrlImg()?>" alt="project<?= $key ?>" />
+									</div>
+									<div class="col-xs-12 col-sm-6 description">
+										<h3>Description</h3>
+										<ul>
+										<?php foreach ($work->getDescription() as $description) {?>
+											<li>$description</li>
+										<?php }?>
+										</ul>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php }?>
+			<?php }?>
+			
+			
 			<!-- PROJECT 1 -->
 			<img class="col-xs-12 col-sm-6 col-centered" src="/images/p3.PNG" alt="project1" data-toggle="modal" data-target="#project1">
 			<!-- Modal project1 -->
@@ -12,14 +49,14 @@
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
-							<h4 id="modalProject1" class="text-center">Réalisation du premier site SERVIZEN</h4>
+							<h3 id="modalProject1" class="text-center">Réalisation du premier site SERVIZEN</h3>
 						</div>
 						<div class="modal-body row">
 							<div class="col-xs-12 col-sm-6">
 								<img class="img-responsive" src="/images/p3.PNG" alt="project1" />
 							</div>
 							<div class="col-xs-12 col-sm-6 description">
-								<h5>Descrition</h5>
+								<h4>Description</h4>
 								<ul>
 									<li>Intégration</li>
 									<li>Utilisation de  HTML/CSS/JavaScript</li>
@@ -28,7 +65,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 						</div>
 					</div>
 				</div>
@@ -42,14 +79,14 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="modalProject2">Réalisation d'un template</h4>
+							<h3 class="modal-title" id="modalProject2">Réalisation d'un template</h3>
 						</div>
 						<div class="modal-body row">
 							<div class="col-xs-12 col-sm-6">
 								<img class="img-responsive" src="/images/p1.PNG" alt="project2" />
 							</div>
 							<div class="col-xs-12 col-sm-6 description">
-								<h5>Description</h5>
+								<h4>Description</h4>
 								<ul>
 									<li>Intégration</li>
 									<li>Utilisation de HTML/CSS</li>
@@ -57,7 +94,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 						</div>
 					</div>
 				</div>
@@ -71,14 +108,14 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="modalProject3">Puissace 4</h4>
+							<h3 class="modal-title" id="modalProject3">Puissace 4</h3>
 						</div>
 						<div class="modal-body row">
 							<div class="col-xs-12 col-sm-6">
 								<img class="img-responsive" src="/images/p5.PNG" alt="project3" />
 							</div>
 							<div class="col-xs-12 col-sm-6 description">
-								<h5>Description</h5>
+								<h4>Description</h4>
 								<ul>
 									<li>Programmation orienté object</li>
 									<li>Langage : C#</li>
@@ -87,7 +124,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 						</div>
 					</div>
 				</div>
@@ -101,14 +138,14 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="modalProject4">Outils de gestion de cocktail</h4>
+							<h3 class="modal-title" id="modalProject4">Outils de gestion de cocktail</h3>
 						</div>
 						<div class="modal-body row">
 							<div class="col-xs-12 col-sm-6">
 								<img class="img-responsive" src="/images/p4.PNG" alt="project4" />
 							</div>
 							<div class="col-xs-12 col-sm-6 description">
-								<h5>Description</h5>
+								<h4>Description</h4>
 								<ul>
 									<li>Programmation orienté object</li>
 									<li>Langage : C#</li>
@@ -117,7 +154,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 						</div>
 					</div>
 				</div>
@@ -131,14 +168,14 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="modalProject5">Portfolio</h4>
+							<h3 class="modal-title" id="modalProject5">Portfolio</h3>
 						</div>
 						<div class="modal-body row">
 							<div class="col-xs-12 col-sm-6">
 								<img class="img-responsive" src="/images/p2.PNG" alt="project5" />
 							</div>
 							<div class="col-xs-12 col-sm-6 description">
-								<h5>Description</h5>
+								<h4>Description</h4>
 								<ul>
 									<li>Programation orienté object</li>
 									<li>Architecture MVC</li>
@@ -148,7 +185,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 						</div>
 					</div>
 				</div>

@@ -1,156 +1,168 @@
 <section id="about">
-			<div>
-				<div>
-					<h3>A propos</h3>
-					<p class="text-justify">
-						Sed fruatur sane hoc solacio atque hanc insignem ignominiam, quoniam uni praeter se inusta sit, putet esse leviorem, dum modo, cuius exemplo se consolatur, eius exitum expectet, praesertim cum in Albucio nec Pisonis libidines nec audacia Gabini fuerit ac tamen hac una plaga conciderit, ignominia senatus.
-					</p>
-				</div>
-				<div class="row row-centered">
-					<div class="col-xs-12 col-sm-6 col-centered">
-						<span class="fa-stack fa-3x icon">
-							<i class="fa fa-square fa-stack-2x"></i>
-							<i class="fa fa-graduation-cap fa-stack-1x"></i>
-						</span>
-						<div  id="training">
-							<h4>Formations</h4>
-							<ul>
-								<!--
-								<?php //foreach ( $this->listTraining as $value ) {?>
-									<li>
-										<div class="date_lieu">
-											<span>
-												<?php //echo $value->getDate(); ?>
-											</span>
-											<em>
-												<?php //echo $value->getSchool(). ' ' . $value->getTown(); ?>
-											</em>
-										</div>
-										<div class="title">
-											<?php //echo $value->getTitle(); ?>
-										</div>
-									</li>
-								<?php //}?>
-								-->
-								
+	<div>
+		<div>
+			<h3>A propos</h3>
+			<p class="text-justify">
+				Je m'appelle Axelle, j'ai 26ans et habite à BRON. 
+				Ma passion pour l'informatique est né il y a plus de 7ans lors de ma première année en information et communication.
+				Durant cette année j'ai eu la chance de passé la certification informatique et internet de niveau, où j'ai pu découvrir et apprendre à  de diffe
+			</p>
+		</div>
+		<div class="row row-centered">
+			<div class="col-xs-12 col-sm-6 col-centered">
+				<!-- icon training -->
+				<span class="fa-stack fa-3x icon">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-graduation-cap fa-stack-1x"></i>
+				</span>
+				<div  id="training">
+					<h4>Formations</h4>
+					<ul>
+
+						<?php if( isset($this->listTraining) && !empty($this->listTraining) ){ ?>
+							<?php foreach ( $this->listTraining as $value ) {?>
 								<li>
 									<div class="date_lieu">
-										<span>06/2015 - 11/2015</span>
-										<em>IP formation Villeurbanne</em>
+										<span>
+											<?= $value->getDate() ?>
+										</span>
+										<em>
+											<?= $value->getSchool(). ' ' . $value->getTown() ?>
+										</em>
 									</div>
-									<div class="title">CARED : DEVELOPPEUR WEB</div>
-								</li>
-								<li>
-									<div class="date_lieu">
-										<span>09/2014 - 12/2014</span>
-										<em>Greta Lyon 8</em>
-									</div>
-									<div class="title">DEVELOPPEUR JAVA / J2EE</div>
-								</li>
-								<li>
-									<div class="date_lieu">
-										<span>09/2010 - 06/2012</span>
-										<em>Lycée Saint Romain en Gal</em>
-									</div>
-									<div class="title">BTS INFORMATIQUE DE GESTION
-										<div>option Développeur d'application</div>
+									<div class="title">
+										<?= $value->getTitle() ?>
 									</div>
 								</li>
-								<li>
-									<div class="date_lieu">
-										<span>09/2007 - 06/2008</span>
-										<em>Université Lyon 2</em>
-									</div>
-									<div class="title">CERTIFICAT INFORMATIQUE ET INTERNET <div>niveau 1</div></div>
-								</li>
-								<li>
-									<div class="date_lieu">
-										<span>09/2007 - 06/2008</span>
-										<em>Université Lyon 2</em>
-									</div>
-									<div class="title">INFORMATION ET COMMUNICATION</div>
-								</li>								
-								<li>
-									<div class="date_lieu">
-										<span>09/2005 - 06/2007</span>
-										<em>Lycée Robet Doisneau</em>
-									</div>
-									<div class="title">BAC SCIENTIFIQUE<div>option Science Vie de la Terre</div></div>
-								</li>
-							</ul>
-						</div>
-					</div>				
-					<div class="col-xs-12 col-sm-6 col-centered">
-						<span class="fa-stack fa-3x icon">
-							<i class="fa fa-square fa-stack-2x"></i>
-							<i class="fa fa-code fa-stack-1x"></i>
-						</span>
-						<div id="jobs">
-							<h4>Experiences</h4>
-							<ul>
-							<!-- 
-								<?php //foreach ( $this->listJob as $value ) {?>
-									<li>
-										<div class="date_lieu">
-											<span>
-												<?php //echo $value->getDate(); ?>
-											</span>
-											<em>
-												<?php //echo $value->getCompany(). ' ' . $value->getTown(); ?>
-											</em>
-										</div>
-										<div class="title">
-											<?php //echo $value->getTitle(); ?>
-										</div>
-										<ul class="description">
-											<?php //foreach ($value->getDescription() as $descrip){?>
-												<?php //echo '<li>'.$descrip.'</li>'; ?>
-											<?php //}?>
-										</ul>
-									</li>
-								<?php //}?>
-							 -->					
-								<li>
-									<div class="date_lieu">
-										<span>09/2015</span>
-										<em>The Legendary Wines - Lyon</em>
-									</div>
-									<div class="title">STAGE - DEVELOPPEUSE WEB</div>
-									<ul class="description">
-										<li>Organisation d'une base de données</li>
-										<li>Gestion d'un compte MailChimp</li>
-										<li>Mise en place d'une campagne d'emailing</li>
-									</ul>
-								</li>
-								<li>
-									<div class="date_lieu">
-										<span>01/2012 - 02/2012</span>
-										<em>Association Bridge club - Vienne</em>
-									</div>
-									<div class="title">STAGE - DEVELOPPEUSE WEB</div>
-									<ul class="description">
-										<li>Mise en place d'un cahier des charges</li>
-										<li>Création d'une base de données MySQL</li>
-										<li>Développement d'un site en HTML/CSS/PHP</li>
-									</ul>
-								</li>
-								<li>
-									<div class="date_lieu">
-										<span>05/2011 - 06/2011</span>
-										<em>SERVIZEN - Lyon 3</em>
-									</div>
-									<div class="title">STAGE - DEVELOPPEUSE WEB</div>
-									<ul class="description">
-										<li>Intégration d'un site avec HTML/CSS/JavaScript</li>
-										<li>Gestion formulaire de contact avec PHP</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-6 col-centered">
-						<a class="btn btn-default" id="btnCV" href="/file/CV_Axelle_JURIN.pdf" target="_blank">Télécharger mon CV</a>
-					</div>
+							<?php }?>
+						<?php }?>
+
+						<li>
+							<div class="date_lieu">
+								<span>06/2015 - 11/2015</span>
+								<em>IP formation Villeurbanne</em>
+							</div>
+							<div class="title">CARED : DEVELOPPER WEB</div>
+						</li>
+
+						<li>
+							<div class="date_lieu">
+								<span>09/2014 - 12/2014</span>
+								<em>Greta Lyon 8</em>
+							</div>
+							<div class="title">DEVELOPEUR JAVA / J2EE</div>
+						</li>
+
+						<li>
+							<div class="date_lieu">
+								<span>09/2010 - 06/2012</span>
+								<em>Lycée Saint Romain en Gal</em>
+							</div>
+							<div class="title">BTS INFORMATIQUE DE GESTION
+								<div>option Développeur d'application</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="date_lieu">
+								<span>09/2007 - 06/2008</span>
+								<em>Université Lyon 2</em>
+							</div>
+							<div class="title">CERTIFICAT INFORMATIQUE ET INTERNET <div>niveau 1</div></div>
+						</li>
+
+						<li>
+							<div class="date_lieu">
+								<span>09/2007 - 06/2008</span>
+								<em>Université Lyon 2</em>
+							</div>
+							<div class="title">INFORMATION ET COMMUNICATION</div>
+						</li>
+
+						<li>
+							<div class="date_lieu">
+								<span>09/2005 - 06/2007</span>
+								<em>Lycée Robet Doisneau</em>
+							</div>
+							<div class="title">BAC SCIENTIFIQUE<div>option Science Vie de la Terre</div></div>
+						</li>
+
+					</ul>
 				</div>
 			</div>
+
+			<div class="col-xs-12 col-sm-6 col-centered">
+				<!-- icon jobs -->
+				<span class="fa-stack fa-3x icon">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-code fa-stack-1x"></i>
+				</span>
+				<div id="jobs">
+					<h4>Experiences</h4>
+					<ul>
+						<?php if( isset($this->listJobs) && !empty($this->listJobs)) {?>
+							<?php foreach ( $this->listJobs as $job ) {?>
+							<li>
+								<div class="date_lieu">
+									<span>
+										<?=  $job->getDate() ?>
+									</span>
+									<em>
+										<?= $job->getCompany(). ' ' . $job->getTown() ?>
+									</em>
+								</div>
+								<div class="title">
+									<?= $job->getTitle() ?>
+								</div>
+								<ul class="description">
+									<?php foreach ($job->getDescription() as $descrip){?>
+									<?= '<li>'.$descrip.'</li>' ?>
+									<?php }?>
+								</ul>
+							</li>
+							<?php }?>
+						<?php }?>				
+						<li>
+							<div class="date_lieu">
+								<span>09/2015</span>
+								<em>The Legendary Wines - Lyon</em>
+							</div>
+							<div class="title">STAGE - DEVELOPPEUSE WEB</div>
+							<ul class="description">
+								<li>Organisation d'une base de données</li>
+								<li>Gestion d'un compte MailChimp</li>
+								<li>Mise en place d'une campagne d'emailing</li>
+							</ul>
+						</li>
+						<li>
+							<div class="date_lieu">
+								<span>01/2012 - 02/2012</span>
+								<em>Association Bridge club - Vienne</em>
+							</div>
+							<div class="title">STAGE - DEVELOPPEUSE WEB</div>
+							<ul class="description">
+								<li>Mise en place d'un cahier des charges</li>
+								<li>Création d'une base de données MySQL</li>
+								<li>Développement d'un site en HTML/CSS/PHP</li>
+							</ul>
+						</li>
+						<li>
+							<div class="date_lieu">
+								<span>05/2011 - 06/2011</span>
+								<em>SERVIZEN - Lyon 3</em>
+							</div>
+							<div class="title">STAGE - DEVELOPPEUSE WEB</div>
+							<ul class="description">
+								<li>Intégration d'un site avec HTML/CSS/JavaScript</li>
+								<li>Gestion formulaire de contact avec PHP</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-6 col-centered">
+				<a class="btn btn-default" id="btnCV" href="/files/CV_Axelle_JURIN.pdf" target="_blank">Télécharger mon CV</a>
+			</div>
+		</div>
+	</div>
 </section>

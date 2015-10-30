@@ -37,15 +37,15 @@ abstract class Career
 		return $date;
 	}
 	
-	protected function dateMY($date){
+	public static function dateMY($date){
 		list($day, $month, $year) = explode('-', $date);
 		$date = "$month-$year";
 		return $date;
 	}
 	
 	public function getDate(){
-		$dateS = $this->dateMY($this->getDateStart());
-		$dateE = $this->dateMY($this->getDateEnd());
+		$dateS = modifDate($this->getDateStart());
+		$dateE = modifDate($this->getDateEnd());
 		
 		if ($dateS == $dateE){
 			$date =  str_replace('-', '/', $dateS);

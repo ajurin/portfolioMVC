@@ -6,11 +6,11 @@ class About extends \My\Controller
 	public function action()
 	{
 		//***TRAINING
-		//$training = new \App\Models\Mappers\Training();
-		//$this->view->listTraining = $training->getList();
+		//$trainingMap = new \App\Models\Mappers\Training();
+		//$this->view->listTraining = $trainingMap->getList();
 		
 		//***JOB
-		//$job = new \App\Models\Mappers\Job();
-		//$this->view->listJob = $job->getList();
+		//$jobMap = new \App\Models\Mappers\Job();
+		//$this->view->listJob = $jobMap->getList();
 	}
 }
