@@ -1,0 +1,298 @@
+/******** PAGE *********/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+html, body, main{
+	height: 100%;
+	width: 100%;
+}
+h1, h2, h3{
+	text-align: center;
+	margin-top : 0px;
+	margin-bottom: 0px;
+	padding: 20px 0px;		
+}
+section{
+	padding: 20px;
+	height: 86%;
+	min-height: 86%;
+	height: auto;
+}
+section>div{
+	max-width: 900px;
+	margin: auto;
+}
+.row-centered{
+	text-align :center;
+}
+.col-centered{
+	display : inline-block;
+	float: none;
+	text-align :center;
+	margin-right: -4px;
+}
+/******* NAV ********/
+.navbar{
+	position: relative;
+	background-color: #023859;
+	border-radius: 0px;
+	border: none;
+	margin-bottom: 0px;
+	min-height : 60px;
+}
+.navbar-header{
+	min-height : 60px;
+}
+.nav li a{
+	display:table-cell;
+	vertical-align : middle;
+	height : 60px;
+}
+button.navbar-toggle{
+	height: 45px;
+}
+.navbar-brand {
+	padding: 15px 0px 0px 15px;
+	font-weight: bold;
+}
+#titrePoste{
+	font-size : 0.6em;
+	padding : 0.1em;
+	font-weight: normal;
+}
+/******** HOME *********/
+#home{
+	background-color: #20638C;
+	color: #FFFFFF;
+	height: 86%;
+}
+#home>div{
+	height: 150px;
+	margin: auto;
+	position: relative;
+	top: 40%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#home h1{
+	font-size: 50px;
+}
+
+/******** SKILLS ***********/
+#skills{
+
+}
+#skills>div{
+
+}
+#skills img{
+	max-height: 70px;
+	max-width: 70px;
+	margin: 5px auto;
+}
+
+/******** ABOUT ************/
+#about{
+	background-color: #F0F0F0;
+	min-height: 100%;
+}
+#about>div{
+
+}
+#training, #jobs{
+	background-color: #FFFFFF;
+	padding: 20px 5%;
+	margin: auto;
+}
+#training h4, #jobs h4{
+	border-bottom: 1px dashed #F0F0F0;
+	padding: 20px 0px 20px;
+}
+#about .title{
+	font-weight: bolder;
+}
+#about .date_lieu{
+	font-size: 12px;
+}
+#about .date_lieu em{
+	padding-left: 2%;
+}
+.icon{
+	color: #549ddd;
+	-webkit-transform: translateY(40%);
+	-ms-transform: translateY(40%);
+	transform: translateY(40%);
+}
+.icon .fa-stack-1x{
+	color: #FFFFFF;
+}
+#about ul{
+	list-style-type: none;
+	display: table;
+	margin: 0px auto;
+}
+#training>ul>li,#jobs>ul>li{
+	text-align: left;
+	margin :15px auto 25px;
+}
+#about #btnCV{
+	margin: 30px auto;
+}
+.description{
+	width : 100%;
+	text-align : left;
+}
+.description>li{
+	font-size: 12px;
+	margin-left: 15px;
+	margin-top:0px;
+	left:0px;
+	padding-bottom : 0px;
+	width:100%;
+}
+/******** WORKS ***********/ 
+#works{
+
+}
+#works div{
+	max-width : 1200px;
+}
+#works img{
+	padding: 20px;
+	max-width :350px;
+	height : 250px;
+}
+#works .modal{
+	top: 50%;
+	bottom: auto;
+	margin: auto;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	max-width: 900px;
+}
+#works .modal img{
+	margin: auto;
+}
+#works .description
+{
+	padding: 0px 40px;
+}
+/******** CONTACT ***********/
+#contact{
+	background-color: #f9f9f9;
+}
+#contact .row{
+	max-width: 900px;
+	margin: auto;
+}
+#formContact form{
+	max-width: 450px;
+	margin: auto;
+	padding: 10px 0px;
+}
+#formContact form button{
+
+}
+#formContact>div {
+}
+.form-control{
+	border: none;
+}
+#info{
+/*	background : #fff;
+	border-radius : 10px;*/
+	max-width :700px;
+	margin:0px auto 30px;
+	float:none;
+}
+#info div{
+	display : table;
+	padding : 0px 15px 15px;
+	margin : auto;
+}
+
+
+#contact #info ul{
+	list-style-type : none;
+}
+#contact #info ul li{
+	margin-top: 10px;
+	margin-bottom : 10px;
+}
+#contact #info ul li i{
+	width : 20px;
+	margin-right : 10px;
+	text-align : center;
+}
+#contact #info ul li a{
+	text-decoration : none;
+	color:black;
+}
+#contact #info ul li a:hover{
+	color:blue;
+}
+/*------ ERREUR --------*/
+#errors{
+	margin: auto;
+	text-align : center;
+	color: red;
+	background-color: #FFABC5;
+	padding : 5px 10px;
+	border-radius : 5px;
+	border: 1px solid red;
+	display:table;
+	
+}
+#errors li{
+	list-style-type: none;
+	padding : 5px;
+	display :inline; 
+}
+#send{
+	margin :auto;
+	text-align : center;
+	color : green;
+	background-color : #EDEDAD;
+	padding : 5px 10px;
+	border-radius : 5px;
+	border: 1px solid green;
+	display:table;
+}
+
+
+/******** FOOTER ***********/
+footer{
+  	height: 60px;
+	background-color: #023859;
+	color: #FFFFFF;
+	text-align: center;
+}
+footer>div{
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+footer div span{
+	margin:0px 15px;
+}
+footer a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+section#error{
+	background-color:#20638C;
+	color:#FFF;
+	height:80%;
+}
+section#error div{
+	position: relative;
+	top: 40%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}

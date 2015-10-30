@@ -1,0 +1,49 @@
+<section id="skills">
+	<div>
+		<h3>Compétences</h3>
+		
+		<div class="row row-centered">
+			
+			<?php if(isset($this->listSkills)){?>
+				<?php foreach ($this->listSkills as $value) {?>
+					<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+						<div><?= $value->getTitle() ?></div>
+						<?php if($value->getUrlImg()) { ?>
+							<img src="<?= $value->getUrlImg() ?>" alt="" class="img-responsive">
+						<?php }?>
+					</div>
+				<?php }?>
+			<?php }?>
+
+			<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+				<div>HTML5</div>
+				<img src="images/logo-html5.png" alt="" class="img-responsive">
+			</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+				<div>CSS3</div>
+				<img src="images/logo-css3.png" alt="" class="img-responsive">
+			</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+				<div>JS</div>
+				<img src="images/logo-javascript.png" alt="" class="img-responsive">
+			</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+				<div>C++</div>
+				<img src="images/logo-cplusplus.png" alt="" class="img-responsive">
+			</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+				<div>C#</div>
+				<img src="images/logo-csharp.png" alt="" class="img-responsive">
+			</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+				<div>PHP5</div>
+				<img src="images/logo-php.png" alt="" class="img-responsive">
+			</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+				<div>Eclipse</div>
+				<img src="images/logo-eclipse.png" alt="" class="img-responsive">
+			</div>
+
+		</div>
+	</div>
+</section>
