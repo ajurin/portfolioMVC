@@ -1,5 +1,7 @@
 Options -Indexes -MultiViews
 
+SetEnv ENV development
+
 <IfModule mod_headers.c>
 	Header always set X-XSS-Protection "1; mode=block"
 	Header always set X-FRAME-OPTIONS "DENY"
@@ -12,7 +14,6 @@ Options -Indexes -MultiViews
 </IfModule>
 
 <IfModule mod_rewrite.c>
-	SetEnv ENV production
 	Options +FollowSymlinks
 	Options +SymlinksIfOwnerMatch
 	RewriteEngine On
